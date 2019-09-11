@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    
 </head>
 <body>
 <?php
@@ -32,10 +33,28 @@ for($p=0; $p <= 100; $p++)
        }
        
    }
-   echo "la valeur"." ".$p." "."est présente"." ". $compteur." "."fois";
-   echo "<br>"; 
-   $compteur =0;
+   ?>
     
+   <?php 
+   if ($compteur >=2)
+   {
+       ?> <p style ="color:red"> <?php echo "la valeur"." ".$p." "."est présente"." ". $compteur." "."fois"?>
+       </p>
+       <?php
+   }
+   else 
+   {
+       ?>
+       <p>
+    <?php echo "la valeur"." ".$p." "."est présente"." ". $compteur." "."fois"?>
+    </p>
+    <?php
+   }
+   ?>
+   
+    <?php  $compteur =0; ?>
+    
+    <?php
 }
 
 ?>
